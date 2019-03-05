@@ -6,7 +6,7 @@ local BYTE_MAX = 2^8
 local SHORT_MAX = 2^16
 local INT_MAX = 2^32
 
-local function BinaryLibMain.PadNumberText(text, digits)
+function BinaryLibMain.PadNumberText(text, digits)
 	local length = text:len()
 	if (length < digits) then
 		for index = 1, digits - length do
@@ -16,7 +16,7 @@ local function BinaryLibMain.PadNumberText(text, digits)
 	return text
 end
 
-local function BinaryLibMain.NumberToBase(number, base, digits)
+function BinaryLibMain.NumberToBase(number, base, digits)
 	--This only works for bases <= 10
 	local textValue = ""
 	repeat
